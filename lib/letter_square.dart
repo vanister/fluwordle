@@ -30,10 +30,9 @@ class LetterSquare extends StatelessWidget {
       decoration:
           BoxDecoration(border: Border.all(width: 4), color: _colorSquare()),
       child: Center(
-          child: Text(
-        letter,
-        style: const TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold)
-      )),
+          child: Text(letter,
+              style: const TextStyle(
+                  fontSize: 18.0, fontWeight: FontWeight.bold))),
     );
   }
 }
