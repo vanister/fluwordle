@@ -28,7 +28,7 @@ class WordleSquare extends StatelessWidget {
       width: 50,
       height: 50,
       decoration:
-          BoxDecoration(border: Border.all(width: 4), color: _colorSquare()),
+          BoxDecoration(border: Border.all(width: 2), color: _colorSquare()),
       child: Center(
           child: Text(letter,
               style: const TextStyle(
