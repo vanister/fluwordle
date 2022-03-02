@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class LetterSquare extends StatelessWidget {
+class WordleSquare extends StatelessWidget {
   final String letter;
   final bool isCorrect;
   final bool isClose;
 
-  const LetterSquare(this.letter,
+  const WordleSquare(this.letter,
       {Key? key, this.isCorrect = false, this.isClose = false})
       : super(key: key);
 
