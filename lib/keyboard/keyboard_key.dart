@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 class KeyboardKey extends StatelessWidget {
   final String letter;
   final bool isUsed;
-  final double rightMargin;
 
-  const KeyboardKey(this.letter,
-      {Key? key, this.isUsed = false, this.rightMargin = 4.0})
+  const KeyboardKey(this.letter, {Key? key, this.isUsed = false})
       : super(key: key);
 
   @override
@@ -14,15 +12,18 @@ class KeyboardKey extends StatelessWidget {
     var keyColor = isUsed ? Colors.grey.shade900 : Colors.grey.shade800;
 
     return Container(
-      width: 32,
+      width: 34,
       height: 58,
-      margin: EdgeInsets.only(right: rightMargin),
       decoration: BoxDecoration(
           color: keyColor, borderRadius: BorderRadius.circular(5)),
       child: Center(
-        child: Text(
-          letter,
-          style: const TextStyle(fontSize: 16),
+        child: TextButton(
+          style: TextButton.styleFrom(splashFactory: NoSplash.splashFactory),
+          onPressed: () => print('Pressed Key: "$letter"'),
+          child: Text(
+            letter,
+            style: const TextStyle(fontSize: 16, color: Colors.white),
+          ),
         ),
       ),
     );
