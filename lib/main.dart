@@ -17,7 +17,7 @@ class WordleApp extends StatelessWidget {
         statusBarIconBrightness: Brightness.dark));
 
     return MaterialApp(
-      title: 'Wordle Clone',
+      title: 'Fluwordle',
       theme:
           ThemeData(primarySwatch: Colors.green, brightness: Brightness.dark),
       home: const WordleScreen(),

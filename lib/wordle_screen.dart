@@ -9,7 +9,7 @@ class WordleScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Wordle Clone')),
+      appBar: AppBar(title: const Text('Fluwordle')),
       body: SafeArea(
         child: Column(children: [
           Expanded(
