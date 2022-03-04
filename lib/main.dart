@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:wordle_clone/wordle_screen.dart';
+
+import 'wordle_screen.dart';
 
 void main() {
   runApp(const WordleApp());

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:wordle_clone/models/key_data.dart';
-import 'package:wordle_clone/keyboard/keyboard_key.dart';
+
+import '../models/key_data.dart';
+import 'keyboard_key.dart';
 
 class KeyboardRow extends StatefulWidget {
   final List<KeyData> rowKeys;
@@ -29,7 +30,7 @@ class _KeyboardRowState extends State<KeyboardRow> {
         children: _keys
             .map((k) => Padding(
                   // pad they keys except the last key
-                  padding: EdgeInsets.only(right: k.lastKey ? 0.0 : 6.0),
+                  padding: EdgeInsets.only(right: k.lastKey ? 0.0 : 4.0),
                   child: KeyboardKey(
                     k.letter,
                     isUsed: k.isUsed,
