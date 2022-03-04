@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:wordle_clone/keyboard/keyboard_row.dart';
-import 'package:wordle_clone/keyboard/us_keyboard.dart';
-import 'package:wordle_clone/wordle_row.dart';
+
+import 'keyboard/us_keyboard.dart';
+import 'wordle_row.dart';
 
 class WordleScreen extends StatelessWidget {
   const WordleScreen({Key? key}) : super(key: key);
@@ -28,28 +28,11 @@ class WordleScreen extends StatelessWidget {
                       WordleRow(),
                     ],
                   ))),
-          Expanded(
+          const Expanded(
               child: SizedBox(
-            width: double.infinity,
-
-            // keyboard_row
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 8.0),
-                  child: KeyboardRow(UsKeyboard.topRow),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 8.0),
-                  child: KeyboardRow(UsKeyboard.middleRow),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 8.0),
-                  child: KeyboardRow(UsKeyboard.bottomRow),
-                ),
-              ],
-            ),
-          ))
+                  width: double.infinity,
+                  // keyboard_row
+                  child: UsKeyboard()))
         ]),
       ),
     );

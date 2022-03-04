@@ -1,6 +1,35 @@
-import 'package:wordle_clone/models/key_data.dart';
+import 'package:flutter/material.dart';
 
-class UsKeyboard {
+import '../models/key_data.dart';
+import 'keyboard_row.dart';
+
+class UsKeyboard extends StatelessWidget {
+  const UsKeyboard({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    const double topPadding = 6;
+
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(top: topPadding),
+          child: KeyboardRow(UsKeyboardLayout.topRow),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: topPadding),
+          child: KeyboardRow(UsKeyboardLayout.middleRow),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: topPadding),
+          child: KeyboardRow(UsKeyboardLayout.bottomRow),
+        ),
+      ],
+    );
+  }
+}
+
+class UsKeyboardLayout {
   static List<KeyData> topRow = [
     KeyData('Q'),
     KeyData('W'),
