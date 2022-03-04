@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 
-class KeyboardKey extends StatelessWidget {
-  final String letter;
-  final bool isUsed;
+import '../models/key_data.dart';
 
-  const KeyboardKey(this.letter, {Key? key, this.isUsed = false})
-      : super(key: key);
+class KeyboardKey extends StatelessWidget {
+  final KeyData keyData;
+
+  const KeyboardKey(this.keyData, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    var keyColor = isUsed ? Colors.grey.shade900 : Colors.grey.shade800;
+    final letter = keyData.letter;
+    final keyColor =
+        keyData.isUsed ? Colors.grey.shade900 : Colors.grey.shade800;
 
     return Container(
       width: 34,

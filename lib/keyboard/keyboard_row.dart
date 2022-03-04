@@ -28,13 +28,10 @@ class _KeyboardRowState extends State<KeyboardRow> {
     return Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: _keys
-            .map((k) => Padding(
+            .map((keyData) => Padding(
                   // pad they keys except the last key
-                  padding: EdgeInsets.only(right: k.lastKey ? 0.0 : 4.0),
-                  child: KeyboardKey(
-                    k.letter,
-                    isUsed: k.isUsed,
-                  ),
+                  padding: EdgeInsets.only(right: keyData.lastKey ? 0.0 : 4.0),
+                  child: KeyboardKey(keyData),
                 ))
             .toList());
   }
